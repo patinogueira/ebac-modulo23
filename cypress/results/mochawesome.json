@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-26T20:30:11.578Z",
+    "end": "2023-10-26T20:30:32.461Z",
+    "duration": 20883,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c106dd56-f62f-4dc9-805d-c0d027808870",
+      "title": "",
+      "fullFile": "cypress/e2e/checkout.spec.cy.js",
+      "file": "cypress/e2e/checkout.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a6c6bfe4-357b-4ed0-bcc4-afe74bd00403",
+          "title": "fluxo de checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "deve adicionar produtos no carrinho e finalizar uma compra",
+              "fullTitle": "fluxo de checkout deve adicionar produtos no carrinho e finalizar uma compra",
+              "timedOut": null,
+              "duration": 20712,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.AddProduto(produtos.tamanho, produtos.cor, produtos.quantidade, produtos.id, produtos.varid);\ncy.get('.dropdown-toggle > .mini-cart-items', {\n  timeout: 1000000\n}).should('contain', 2);\ncy.cadastroFaturamentoCheckout(dados[1].cep, dados[1].telefone);\ncy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido.');",
+              "err": {},
+              "uuid": "b638a62f-8eee-43ba-8e54-06e88bbc8e2a",
+              "parentUUID": "a6c6bfe4-357b-4ed0-bcc4-afe74bd00403",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b638a62f-8eee-43ba-8e54-06e88bbc8e2a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20712,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

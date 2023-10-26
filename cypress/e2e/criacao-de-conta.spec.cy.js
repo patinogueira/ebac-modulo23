@@ -16,7 +16,6 @@ describe('fluxo de criacao de conta', () => {
   it('deve validar mensagem de email invalido', () => {
     registerPage.register(dados[0].user, faker.internet.password())
    dashboardPage.errormessage.should('contain', 'Erro: Informe um endereço de e-mail válido.')
-    
 });
 
 it('deve validar mensagem de email ja em uso', () => {

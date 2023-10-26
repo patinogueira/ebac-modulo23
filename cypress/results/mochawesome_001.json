@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-26T20:30:43.790Z",
+    "end": "2023-10-26T20:31:07.193Z",
+    "duration": 23403,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "33e9208c-4b88-4359-a2a6-5a294a5328db",
+      "title": "",
+      "fullFile": "cypress/e2e/criacao-de-conta.spec.cy.js",
+      "file": "cypress/e2e/criacao-de-conta.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e162528e-511e-4650-adb8-e94a00ed1885",
+          "title": "fluxo de criacao de conta",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "deve registrar uma conta com sucesso",
+              "fullTitle": "fluxo de criacao de conta deve registrar uma conta com sucesso",
+              "timedOut": null,
+              "duration": 7743,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "registerPage.register(faker.internet.email(), faker.internet.password());\ndashboardPage.message.should('contain', 'Welcome');",
+              "err": {},
+              "uuid": "98ed9f5e-4a2f-471e-aa7d-6a9dc253c6f6",
+              "parentUUID": "e162528e-511e-4650-adb8-e94a00ed1885",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "deve validar mensagem de email invalido",
+              "fullTitle": "fluxo de criacao de conta deve validar mensagem de email invalido",
+              "timedOut": null,
+              "duration": 3535,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "registerPage.register(dados[0].user, faker.internet.password());\ndashboardPage.errormessage.should('contain', 'Erro: Informe um endereço de e-mail válido.');",
+              "err": {},
+              "uuid": "4e1a4785-9272-4bbb-a6d3-21210a6cc8bf",
+              "parentUUID": "e162528e-511e-4650-adb8-e94a00ed1885",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "deve validar mensagem de email ja em uso",
+              "fullTitle": "fluxo de criacao de conta deve validar mensagem de email ja em uso",
+              "timedOut": null,
+              "duration": 11699,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let user = faker.internet.email();\nlet password = faker.internet.password();\nregisterPage.register(user, password);\ndashboardPage.logout.click();\ncy.visit('/minha-conta');\nregisterPage.register(user, password);\ndashboardPage.errormessage.should('contain', 'Erro: Uma conta já está registrada com seu endereço de e-mail.');",
+              "err": {},
+              "uuid": "411e8b1f-6961-46fa-a316-95d2c76ed951",
+              "parentUUID": "e162528e-511e-4650-adb8-e94a00ed1885",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "98ed9f5e-4a2f-471e-aa7d-6a9dc253c6f6",
+            "4e1a4785-9272-4bbb-a6d3-21210a6cc8bf",
+            "411e8b1f-6961-46fa-a316-95d2c76ed951"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22977,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
