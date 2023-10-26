@@ -65,3 +65,13 @@ Cypress.Commands.add('loginAula', (user, pass) => {
     }) 
     cy.visit('produtos/')
 })
+
+Cypress.Commands.add('emptyCart', () => {
+    cy.visit('carrinho/');
+    cy.get('.dropdown-toggle > .mini-cart-items').then(($element) => {
+      const numero = parseInt($element.text().trim(), 10);
+      if (numero !== 0) {
+        cy.get('.remove > .fa').click();
+      }
+    });
+  });

@@ -2,12 +2,11 @@
 const faker = require('faker');
 const dados = require('../fixtures/dados.json')
 const produtos = require('../fixtures/produtos.json')
-const emptyCartPage = require("../support/pages/emptycart.page");
 
 describe('fluxo de checkout', () => {
     beforeEach(() => {
         cy.loginAula(dados[1].user, dados[1].password)
-        cy.emptyCartPage
+        cy.emptyCart()
     });
    
     it('deve adicionar produtos no carrinho e finalizar uma compra', () => {

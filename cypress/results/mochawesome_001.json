@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-26T20:30:43.790Z",
-    "end": "2023-10-26T20:31:07.193Z",
-    "duration": 23403,
+    "start": "2023-10-26T21:22:04.487Z",
+    "end": "2023-10-26T21:22:28.522Z",
+    "duration": 24035,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "33e9208c-4b88-4359-a2a6-5a294a5328db",
+      "uuid": "aa5df2b5-621b-47cc-bae8-d1db69382506",
       "title": "",
       "fullFile": "cypress/e2e/criacao-de-conta.spec.cy.js",
       "file": "cypress/e2e/criacao-de-conta.spec.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e162528e-511e-4650-adb8-e94a00ed1885",
+          "uuid": "4ad5e70a-faa1-4de1-9c4f-ed67ce60bf84",
           "title": "fluxo de criacao de conta",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "deve registrar uma conta com sucesso",
               "fullTitle": "fluxo de criacao de conta deve registrar uma conta com sucesso",
               "timedOut": null,
-              "duration": 7743,
+              "duration": 7724,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "registerPage.register(faker.internet.email(), faker.internet.password());\ndashboardPage.message.should('contain', 'Welcome');",
               "err": {},
-              "uuid": "98ed9f5e-4a2f-471e-aa7d-6a9dc253c6f6",
-              "parentUUID": "e162528e-511e-4650-adb8-e94a00ed1885",
+              "uuid": "2c0ff5bc-60da-4629-b736-f1f11f786675",
+              "parentUUID": "4ad5e70a-faa1-4de1-9c4f-ed67ce60bf84",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "deve validar mensagem de email invalido",
               "fullTitle": "fluxo de criacao de conta deve validar mensagem de email invalido",
               "timedOut": null,
-              "duration": 3535,
+              "duration": 4272,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "registerPage.register(dados[0].user, faker.internet.password());\ndashboardPage.errormessage.should('contain', 'Erro: Informe um endereço de e-mail válido.');",
               "err": {},
-              "uuid": "4e1a4785-9272-4bbb-a6d3-21210a6cc8bf",
-              "parentUUID": "e162528e-511e-4650-adb8-e94a00ed1885",
+              "uuid": "a9f8e35c-cab5-4285-90ab-2a82b9a90b71",
+              "parentUUID": "4ad5e70a-faa1-4de1-9c4f-ed67ce60bf84",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "deve validar mensagem de email ja em uso",
               "fullTitle": "fluxo de criacao de conta deve validar mensagem de email ja em uso",
               "timedOut": null,
-              "duration": 11699,
+              "duration": 11590,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "let user = faker.internet.email();\nlet password = faker.internet.password();\nregisterPage.register(user, password);\ndashboardPage.logout.click();\ncy.visit('/minha-conta');\nregisterPage.register(user, password);\ndashboardPage.errormessage.should('contain', 'Erro: Uma conta já está registrada com seu endereço de e-mail.');",
               "err": {},
-              "uuid": "411e8b1f-6961-46fa-a316-95d2c76ed951",
-              "parentUUID": "e162528e-511e-4650-adb8-e94a00ed1885",
+              "uuid": "076eb3aa-3011-4a3d-b649-3d1bab01f870",
+              "parentUUID": "4ad5e70a-faa1-4de1-9c4f-ed67ce60bf84",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "98ed9f5e-4a2f-471e-aa7d-6a9dc253c6f6",
-            "4e1a4785-9272-4bbb-a6d3-21210a6cc8bf",
-            "411e8b1f-6961-46fa-a316-95d2c76ed951"
+            "2c0ff5bc-60da-4629-b736-f1f11f786675",
+            "a9f8e35c-cab5-4285-90ab-2a82b9a90b71",
+            "076eb3aa-3011-4a3d-b649-3d1bab01f870"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 22977,
+          "duration": 23586,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

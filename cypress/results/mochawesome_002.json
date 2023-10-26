@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-26T20:31:12.383Z",
-    "end": "2023-10-26T20:31:27.140Z",
-    "duration": 14757,
+    "start": "2023-10-26T21:22:33.670Z",
+    "end": "2023-10-26T21:22:47.911Z",
+    "duration": 14241,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "048ed952-b48c-4329-a0a8-cdf211a2555f",
+      "uuid": "fc65a45e-d829-4e82-a9b6-eaf8cfeae180",
       "title": "",
       "fullFile": "cypress/e2e/shopping-cart.spec.cy.js",
       "file": "cypress/e2e/shopping-cart.spec.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "dfdf4a56-95e3-4ceb-a492-612d39639055",
+          "uuid": "33fcd617-6b9a-44e7-a55f-dfea25a13589",
           "title": "interceptando as respostas do carrinho de compras",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "deve adicionar item no carrinho",
               "fullTitle": "interceptando as respostas do carrinho de compras deve adicionar item no carrinho",
               "timedOut": null,
-              "duration": 7710,
+              "duration": 7749,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.intercept({\n  url: '/product*',\n  method: 'POST'\n}, req => {\n  req.reply({\n    statusCode: 200,\n    body: htmlAddP\n  });\n}).as('carrinhoPost');\ncy.intercept({\n  method: 'GET',\n  url: '/carrinho*'\n}, req => {\n  if (req.headers.cookie.includes(\"woocommerce_items_in_cart=1\")) {\n    req.reply({\n      statusCode: 200,\n      body: htmlAddP\n    });\n  }\n}).as('fragmentsEdit');\ncy.AddProduto(produtos.tamanho, produtos.cor, produtos.quantidade, produtos.id, produtos.varid);\ncartPage.verCarrinho();\ncy.get('.woocommerce-message').should('contain', 'Beaumont Summit Kit');",
               "err": {},
-              "uuid": "b7b0f64f-57e6-4799-87ca-34ec6bc1f6b2",
-              "parentUUID": "dfdf4a56-95e3-4ceb-a492-612d39639055",
+              "uuid": "300386a8-8272-4993-ae94-cc56d40cd0bb",
+              "parentUUID": "33fcd617-6b9a-44e7-a55f-dfea25a13589",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "deve atualizar o item no carrinho",
               "fullTitle": "interceptando as respostas do carrinho de compras deve atualizar o item no carrinho",
               "timedOut": null,
-              "duration": 3415,
+              "duration": 3320,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.AddProduto(produtos.tamanho, produtos.cor, produtos.quantidade, produtos.id, produtos.varid);\ncy.intercept({\n  url: '/carrinho*',\n  method: 'GET'\n}, req => {\n  req.reply({\n    statusCode: 200,\n    body: htmlEdit\n  });\n}).as('carrinhoGET');\ncy.intercept({\n  method: 'POST',\n  url: '/?wc-ajax=get_refreshed_fragments*'\n}, req => {\n  if (req.headers.cookie.includes(\"woocommerce_items_in_cart=1\")) {\n    req.reply({\n      statusCode: 200,\n      body: carrinho.edit\n    });\n  }\n}).as('fragmentsEdit');\ncartPage.addMaisUm();\ncartPage.Total.should('contain', '84,00');",
               "err": {},
-              "uuid": "063d4330-ac48-47c8-a815-7cc60b084108",
-              "parentUUID": "dfdf4a56-95e3-4ceb-a492-612d39639055",
+              "uuid": "e53afda8-7e23-4360-acbd-d8b7740e4ab2",
+              "parentUUID": "33fcd617-6b9a-44e7-a55f-dfea25a13589",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "deve deletar item do carrinho",
               "fullTitle": "interceptando as respostas do carrinho de compras deve deletar item do carrinho",
               "timedOut": null,
-              "duration": 3166,
+              "duration": 2760,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.AddProduto(produtos.tamanho, produtos.cor, produtos.quantidade, produtos.id, produtos.varid);\ncy.intercept({\n  url: '/carrinho*',\n  method: 'GET'\n}, req => {\n  req.reply({\n    statusCode: 200,\n    body: htmlRemove\n  });\n}).as('carrinhoGET');\ncy.intercept({\n  method: 'POST',\n  url: '/?wc-ajax=get_refreshed_fragments*'\n}, req => {\n  if (req.headers.cookie.includes(\"woocommerce_items_in_cart=1\")) {\n    req.reply({\n      statusCode: 200,\n      body: carrinho.remover\n    });\n  }\n}).as('fragmentsEdit');\ncartPage.addMaisUm();\ncartPage.carrinhoVazio.should('contain', 'Seu carrinho está vazio');",
               "err": {},
-              "uuid": "e4b7890d-c16f-4152-bf55-9b75dc74898b",
-              "parentUUID": "dfdf4a56-95e3-4ceb-a492-612d39639055",
+              "uuid": "d6910d97-39a0-45c6-8ab8-811076ff8502",
+              "parentUUID": "33fcd617-6b9a-44e7-a55f-dfea25a13589",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b7b0f64f-57e6-4799-87ca-34ec6bc1f6b2",
-            "063d4330-ac48-47c8-a815-7cc60b084108",
-            "e4b7890d-c16f-4152-bf55-9b75dc74898b"
+            "300386a8-8272-4993-ae94-cc56d40cd0bb",
+            "e53afda8-7e23-4360-acbd-d8b7740e4ab2",
+            "d6910d97-39a0-45c6-8ab8-811076ff8502"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 14291,
+          "duration": 13829,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

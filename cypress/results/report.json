@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2023-10-26T20:30:11.578Z",
-    "end": "2023-10-26T20:31:27.140Z",
-    "duration": 75562
+    "start": "2023-10-26T21:21:33.260Z",
+    "end": "2023-10-26T21:22:47.911Z",
+    "duration": 74651
   },
   "results": [
     {
-      "uuid": "c106dd56-f62f-4dc9-805d-c0d027808870",
+      "uuid": "f592831d-6e73-4076-899a-678ca83c85ef",
       "title": "",
       "fullFile": "cypress/e2e/checkout.spec.cy.js",
       "file": "cypress/e2e/checkout.spec.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a6c6bfe4-357b-4ed0-bcc4-afe74bd00403",
+          "uuid": "8460137f-140b-4b72-816e-bc80751e43f7",
           "title": "fluxo de checkout",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "deve adicionar produtos no carrinho e finalizar uma compra",
               "fullTitle": "fluxo de checkout deve adicionar produtos no carrinho e finalizar uma compra",
               "timedOut": null,
-              "duration": 20712,
+              "duration": 20626,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.AddProduto(produtos.tamanho, produtos.cor, produtos.quantidade, produtos.id, produtos.varid);\ncy.get('.dropdown-toggle > .mini-cart-items', {\n  timeout: 1000000\n}).should('contain', 2);\ncy.cadastroFaturamentoCheckout(dados[1].cep, dados[1].telefone);\ncy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido.');",
               "err": {},
-              "uuid": "b638a62f-8eee-43ba-8e54-06e88bbc8e2a",
-              "parentUUID": "a6c6bfe4-357b-4ed0-bcc4-afe74bd00403",
+              "uuid": "f28b2613-d9a2-43fd-a8bc-d5cce090ec59",
+              "parentUUID": "8460137f-140b-4b72-816e-bc80751e43f7",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b638a62f-8eee-43ba-8e54-06e88bbc8e2a"
+            "f28b2613-d9a2-43fd-a8bc-d5cce090ec59"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 20712,
+          "duration": 20626,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -76,7 +76,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "33e9208c-4b88-4359-a2a6-5a294a5328db",
+      "uuid": "aa5df2b5-621b-47cc-bae8-d1db69382506",
       "title": "",
       "fullFile": "cypress/e2e/criacao-de-conta.spec.cy.js",
       "file": "cypress/e2e/criacao-de-conta.spec.cy.js",
@@ -85,7 +85,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e162528e-511e-4650-adb8-e94a00ed1885",
+          "uuid": "4ad5e70a-faa1-4de1-9c4f-ed67ce60bf84",
           "title": "fluxo de criacao de conta",
           "fullFile": "",
           "file": "",
@@ -96,7 +96,7 @@
               "title": "deve registrar uma conta com sucesso",
               "fullTitle": "fluxo de criacao de conta deve registrar uma conta com sucesso",
               "timedOut": null,
-              "duration": 7743,
+              "duration": 7724,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -105,8 +105,8 @@
               "context": null,
               "code": "registerPage.register(faker.internet.email(), faker.internet.password());\ndashboardPage.message.should('contain', 'Welcome');",
               "err": {},
-              "uuid": "98ed9f5e-4a2f-471e-aa7d-6a9dc253c6f6",
-              "parentUUID": "e162528e-511e-4650-adb8-e94a00ed1885",
+              "uuid": "2c0ff5bc-60da-4629-b736-f1f11f786675",
+              "parentUUID": "4ad5e70a-faa1-4de1-9c4f-ed67ce60bf84",
               "isHook": false,
               "skipped": false
             },
@@ -114,7 +114,7 @@
               "title": "deve validar mensagem de email invalido",
               "fullTitle": "fluxo de criacao de conta deve validar mensagem de email invalido",
               "timedOut": null,
-              "duration": 3535,
+              "duration": 4272,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -123,8 +123,8 @@
               "context": null,
               "code": "registerPage.register(dados[0].user, faker.internet.password());\ndashboardPage.errormessage.should('contain', 'Erro: Informe um endereço de e-mail válido.');",
               "err": {},
-              "uuid": "4e1a4785-9272-4bbb-a6d3-21210a6cc8bf",
-              "parentUUID": "e162528e-511e-4650-adb8-e94a00ed1885",
+              "uuid": "a9f8e35c-cab5-4285-90ab-2a82b9a90b71",
+              "parentUUID": "4ad5e70a-faa1-4de1-9c4f-ed67ce60bf84",
               "isHook": false,
               "skipped": false
             },
@@ -132,7 +132,7 @@
               "title": "deve validar mensagem de email ja em uso",
               "fullTitle": "fluxo de criacao de conta deve validar mensagem de email ja em uso",
               "timedOut": null,
-              "duration": 11699,
+              "duration": 11590,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -141,22 +141,22 @@
               "context": null,
               "code": "let user = faker.internet.email();\nlet password = faker.internet.password();\nregisterPage.register(user, password);\ndashboardPage.logout.click();\ncy.visit('/minha-conta');\nregisterPage.register(user, password);\ndashboardPage.errormessage.should('contain', 'Erro: Uma conta já está registrada com seu endereço de e-mail.');",
               "err": {},
-              "uuid": "411e8b1f-6961-46fa-a316-95d2c76ed951",
-              "parentUUID": "e162528e-511e-4650-adb8-e94a00ed1885",
+              "uuid": "076eb3aa-3011-4a3d-b649-3d1bab01f870",
+              "parentUUID": "4ad5e70a-faa1-4de1-9c4f-ed67ce60bf84",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "98ed9f5e-4a2f-471e-aa7d-6a9dc253c6f6",
-            "4e1a4785-9272-4bbb-a6d3-21210a6cc8bf",
-            "411e8b1f-6961-46fa-a316-95d2c76ed951"
+            "2c0ff5bc-60da-4629-b736-f1f11f786675",
+            "a9f8e35c-cab5-4285-90ab-2a82b9a90b71",
+            "076eb3aa-3011-4a3d-b649-3d1bab01f870"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 22977,
+          "duration": 23586,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -172,7 +172,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "048ed952-b48c-4329-a0a8-cdf211a2555f",
+      "uuid": "fc65a45e-d829-4e82-a9b6-eaf8cfeae180",
       "title": "",
       "fullFile": "cypress/e2e/shopping-cart.spec.cy.js",
       "file": "cypress/e2e/shopping-cart.spec.cy.js",
@@ -181,7 +181,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "dfdf4a56-95e3-4ceb-a492-612d39639055",
+          "uuid": "33fcd617-6b9a-44e7-a55f-dfea25a13589",
           "title": "interceptando as respostas do carrinho de compras",
           "fullFile": "",
           "file": "",
@@ -192,7 +192,7 @@
               "title": "deve adicionar item no carrinho",
               "fullTitle": "interceptando as respostas do carrinho de compras deve adicionar item no carrinho",
               "timedOut": null,
-              "duration": 7710,
+              "duration": 7749,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -201,8 +201,8 @@
               "context": null,
               "code": "cy.intercept({\n  url: '/product*',\n  method: 'POST'\n}, req => {\n  req.reply({\n    statusCode: 200,\n    body: htmlAddP\n  });\n}).as('carrinhoPost');\ncy.intercept({\n  method: 'GET',\n  url: '/carrinho*'\n}, req => {\n  if (req.headers.cookie.includes(\"woocommerce_items_in_cart=1\")) {\n    req.reply({\n      statusCode: 200,\n      body: htmlAddP\n    });\n  }\n}).as('fragmentsEdit');\ncy.AddProduto(produtos.tamanho, produtos.cor, produtos.quantidade, produtos.id, produtos.varid);\ncartPage.verCarrinho();\ncy.get('.woocommerce-message').should('contain', 'Beaumont Summit Kit');",
               "err": {},
-              "uuid": "b7b0f64f-57e6-4799-87ca-34ec6bc1f6b2",
-              "parentUUID": "dfdf4a56-95e3-4ceb-a492-612d39639055",
+              "uuid": "300386a8-8272-4993-ae94-cc56d40cd0bb",
+              "parentUUID": "33fcd617-6b9a-44e7-a55f-dfea25a13589",
               "isHook": false,
               "skipped": false
             },
@@ -210,7 +210,7 @@
               "title": "deve atualizar o item no carrinho",
               "fullTitle": "interceptando as respostas do carrinho de compras deve atualizar o item no carrinho",
               "timedOut": null,
-              "duration": 3415,
+              "duration": 3320,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -219,8 +219,8 @@
               "context": null,
               "code": "cy.AddProduto(produtos.tamanho, produtos.cor, produtos.quantidade, produtos.id, produtos.varid);\ncy.intercept({\n  url: '/carrinho*',\n  method: 'GET'\n}, req => {\n  req.reply({\n    statusCode: 200,\n    body: htmlEdit\n  });\n}).as('carrinhoGET');\ncy.intercept({\n  method: 'POST',\n  url: '/?wc-ajax=get_refreshed_fragments*'\n}, req => {\n  if (req.headers.cookie.includes(\"woocommerce_items_in_cart=1\")) {\n    req.reply({\n      statusCode: 200,\n      body: carrinho.edit\n    });\n  }\n}).as('fragmentsEdit');\ncartPage.addMaisUm();\ncartPage.Total.should('contain', '84,00');",
               "err": {},
-              "uuid": "063d4330-ac48-47c8-a815-7cc60b084108",
-              "parentUUID": "dfdf4a56-95e3-4ceb-a492-612d39639055",
+              "uuid": "e53afda8-7e23-4360-acbd-d8b7740e4ab2",
+              "parentUUID": "33fcd617-6b9a-44e7-a55f-dfea25a13589",
               "isHook": false,
               "skipped": false
             },
@@ -228,7 +228,7 @@
               "title": "deve deletar item do carrinho",
               "fullTitle": "interceptando as respostas do carrinho de compras deve deletar item do carrinho",
               "timedOut": null,
-              "duration": 3166,
+              "duration": 2760,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -237,22 +237,22 @@
               "context": null,
               "code": "cy.AddProduto(produtos.tamanho, produtos.cor, produtos.quantidade, produtos.id, produtos.varid);\ncy.intercept({\n  url: '/carrinho*',\n  method: 'GET'\n}, req => {\n  req.reply({\n    statusCode: 200,\n    body: htmlRemove\n  });\n}).as('carrinhoGET');\ncy.intercept({\n  method: 'POST',\n  url: '/?wc-ajax=get_refreshed_fragments*'\n}, req => {\n  if (req.headers.cookie.includes(\"woocommerce_items_in_cart=1\")) {\n    req.reply({\n      statusCode: 200,\n      body: carrinho.remover\n    });\n  }\n}).as('fragmentsEdit');\ncartPage.addMaisUm();\ncartPage.carrinhoVazio.should('contain', 'Seu carrinho está vazio');",
               "err": {},
-              "uuid": "e4b7890d-c16f-4152-bf55-9b75dc74898b",
-              "parentUUID": "dfdf4a56-95e3-4ceb-a492-612d39639055",
+              "uuid": "d6910d97-39a0-45c6-8ab8-811076ff8502",
+              "parentUUID": "33fcd617-6b9a-44e7-a55f-dfea25a13589",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b7b0f64f-57e6-4799-87ca-34ec6bc1f6b2",
-            "063d4330-ac48-47c8-a815-7cc60b084108",
-            "e4b7890d-c16f-4152-bf55-9b75dc74898b"
+            "300386a8-8272-4993-ae94-cc56d40cd0bb",
+            "e53afda8-7e23-4360-acbd-d8b7740e4ab2",
+            "d6910d97-39a0-45c6-8ab8-811076ff8502"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 14291,
+          "duration": 13829,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

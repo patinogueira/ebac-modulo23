@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-26T20:30:11.578Z",
-    "end": "2023-10-26T20:30:32.461Z",
-    "duration": 20883,
+    "start": "2023-10-26T21:21:33.260Z",
+    "end": "2023-10-26T21:21:54.090Z",
+    "duration": 20830,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c106dd56-f62f-4dc9-805d-c0d027808870",
+      "uuid": "f592831d-6e73-4076-899a-678ca83c85ef",
       "title": "",
       "fullFile": "cypress/e2e/checkout.spec.cy.js",
       "file": "cypress/e2e/checkout.spec.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a6c6bfe4-357b-4ed0-bcc4-afe74bd00403",
+          "uuid": "8460137f-140b-4b72-816e-bc80751e43f7",
           "title": "fluxo de checkout",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "deve adicionar produtos no carrinho e finalizar uma compra",
               "fullTitle": "fluxo de checkout deve adicionar produtos no carrinho e finalizar uma compra",
               "timedOut": null,
-              "duration": 20712,
+              "duration": 20626,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.AddProduto(produtos.tamanho, produtos.cor, produtos.quantidade, produtos.id, produtos.varid);\ncy.get('.dropdown-toggle > .mini-cart-items', {\n  timeout: 1000000\n}).should('contain', 2);\ncy.cadastroFaturamentoCheckout(dados[1].cep, dados[1].telefone);\ncy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido.');",
               "err": {},
-              "uuid": "b638a62f-8eee-43ba-8e54-06e88bbc8e2a",
-              "parentUUID": "a6c6bfe4-357b-4ed0-bcc4-afe74bd00403",
+              "uuid": "f28b2613-d9a2-43fd-a8bc-d5cce090ec59",
+              "parentUUID": "8460137f-140b-4b72-816e-bc80751e43f7",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b638a62f-8eee-43ba-8e54-06e88bbc8e2a"
+            "f28b2613-d9a2-43fd-a8bc-d5cce090ec59"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 20712,
+          "duration": 20626,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
