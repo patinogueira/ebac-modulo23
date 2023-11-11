@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run --reporter mochawesome --reporter-options reportDir=\"cypress/results\",overwrite=false,html=false,json=true",
-    "test-report": "npx mochawesome-merge cypress/results/*.json -o cypress/results/report.json && npx marge cypress/results/report.json"
+    "test": "npx cypress run --reporter mochawesome --reporter-options reportDir=\"cypress/results\",overwrite=false,html=true,json=true",
+    "test-report": "npx mochawesome-merge cypress/results/*.json -o cypress/results/index.json && npx marge cypress/results/index.json",
+    "test-and-report": "npx cypress run --reporter mochawesome --reporter-options reportDir=\"cypress/results\",overwrite=false,html=true,json=true && npx mochawesome-merge cypress/results/*.json -o cypress/results/index.json && npx marge cypress/results/index.json"
   },
   "keywords": [],
   "author": "",
