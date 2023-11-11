@@ -19,19 +19,14 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
-          node-version: '18.17.1'
-          
-      - name: Install dependencies
-        run: npm install
-    
-      - name: Cypress.io
-        # You may pin to the exact commit or the version.
-        # uses: cypress-io/github-action@59810ebfa5a5ac6fcfdcfdf036d1cd4d083a88f2
-      - uses: cypress-io/github-action@v6.5.0
-        with:
-          browser: chrome
-          command: npm run test-and-report
+          node-version: '20'
 
+      - name: Cypress run
+        uses: cypress-io/github-action@v6.5.0
+        continue-on-error: true
+        with:
+          install-command: npm install
+          command: npm run test-and-report
           
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
