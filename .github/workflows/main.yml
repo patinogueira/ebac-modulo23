@@ -24,8 +24,14 @@ jobs:
       - name: Install dependencies
         run: npm install
     
-      - name: Run Cypress test and generate report
-        run: npm run test-and-report
+      - name: Cypress.io
+        # You may pin to the exact commit or the version.
+        # uses: cypress-io/github-action@59810ebfa5a5ac6fcfdcfdf036d1cd4d083a88f2
+      - uses: cypress-io/github-action@v6.5.0
+        with:
+          browser: chrome
+          command: npm run test-and-report
+
           
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
